@@ -1,0 +1,30 @@
+<div id="navigation">
+  <?=$this->navigation() ?>
+</div>
+<div id="breadcrumbs">
+  <?=$this->navigation()->breadcrumbs(); ?>
+</div>
+
+<div id="content">
+  <?=$this->layout()->content ?>
+</div>
+
+<div id="footer">
+  <?php 
+   $home = $this->navigation()->findOneBy('action','index');
+   $contact = $this->navigation()->findOneBy('action','contact');
+   $tos = $this->navigation()->findOneBy('action','tos');
+
+  ?>
+  <?=$this->navigation()->htmlify($home);  ?> | 
+  <?=$this->navigation()->htmlify($contact);  ?> |
+  <?=$this->navigation()->htmlify($tos);  ?> 
+
+
+  <div id="switch-roles">
+    <h3>Switch Roles</h3>
+    <a href="/?role=admin">Admin</a> | 
+    <a href="/?role=member">Member</a> | 
+    <a href="/?role=guest">Guest</a> 
+  </div>
+</div>
