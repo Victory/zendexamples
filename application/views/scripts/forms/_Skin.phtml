@@ -1,0 +1,32 @@
+<?php $form = $this->element ?>
+
+<form action="<?=$form->getAction() ?>"
+      method="<?=$form->getMethod() ?>">
+
+
+  <div class="name-input">
+    <span class="required" title="required"> * </span>
+    <span class="fake-label">First Name:</span> <?=$form->firstname ?>
+  </div>
+
+  <div class="name-input">
+    <span class="required" title="required"> * </span>
+    <span class="fake-label">Last Name:</span> <?=$form->lastname ?>
+  </div>
+
+  <?=$form->submit ?>
+</form>
+
+<style tyle="text/css">
+span.fake-label {
+ width: 90px;
+ display:block;
+ float:left;
+}
+span.required{
+ color: #F00;
+ float:left;
+ padding-right: 3px;
+}
+
+</style>
