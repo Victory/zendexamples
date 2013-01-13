@@ -7,13 +7,14 @@ class IndexControllerTest extends Zend_Test_PHPUnit_ControllerTestCase
     $this->bootstrap = new Zend_Application(
       APPLICATION_ENV, 
       APPLICATION_PATH . '/configs/application.ini');
+
     parent::setUp();
   }
   
   public function testHaveAllFormsAction(){
     $params = Array(
       'action' => 'index', 
-      'controller' => 'Index', 
+      'controller' => 'index', 
       'module' => 'default');
 
     $urlParams = $this->urlizeOptions($params);
@@ -36,7 +37,7 @@ class IndexControllerTest extends Zend_Test_PHPUnit_ControllerTestCase
 
     $params = Array(
       'action' => 'index', 
-      'controller' => 'Index', 
+      'controller' => 'index', 
       'module' => 'default');
 
     $this->request->setMethod('POST');
@@ -59,7 +60,7 @@ class IndexControllerTest extends Zend_Test_PHPUnit_ControllerTestCase
 
     $params = Array(
       'action' => 'index', 
-      'controller' => 'Index', 
+      'controller' => 'index', 
       'module' => 'default');
 
     $this->request->setMethod('POST');

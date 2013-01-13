@@ -11,9 +11,9 @@
 
 <div id="footer">
   <?php 
-   $home = $this->navigation()->findOneBy('action','index');
-   $contact = $this->navigation()->findOneBy('action','contact');
-   $tos = $this->navigation()->findOneBy('action','tos');
+   $home = $this->navigation()->findOneBy('route','home');
+   $contact = $this->navigation()->findOneBy('route','contact');
+   $tos = $this->navigation()->findOneBy('route','tos');
 
   ?>
   <?=$this->navigation()->htmlify($home);  ?> | 
